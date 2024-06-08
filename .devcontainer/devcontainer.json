@@ -1,0 +1,14 @@
+{
+  "name": "FastAPI Codespace",
+  "image": "python:3.9",
+  "extensions": [
+    "ms-python.python"
+  ],
+  "forwardPorts": [8000],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "postCreateCommand": "pip install -r requirements.txt",
+  "workspaceMount": "source=/workspace,target=/workspace,type=volume",
+  "runArgs": ["-v", "/var/run/docker.sock:/var/run/docker.sock"]
+}
